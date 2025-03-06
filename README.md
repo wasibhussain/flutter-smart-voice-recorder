@@ -1,16 +1,21 @@
-# test_project
+# Flutter Voice Recorder with Silence Detection
 
-A new Flutter project.
+A Flutter application that provides a smart voice recording experience by automatically detecting silence and stopping the recording. This app calibrates to the ambient noise in the environment to intelligently distinguish between speech and background noise.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Automatically stops recording after detecting silence for a configurable duration
+- Adapts to background noise through automatic noise level calibration
+- Efficiently handles audio processing to minimize battery usage
+- Simple, clean UI for easy recording experience
+- Uses flutter_sound for audio processing
 
-A few resources to get you started if this is your first Flutter project:
+## Technical Details
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This application implements an adaptive voice activity detection (VAD) algorithm that:
+- Measures and calibrates to the ambient noise level
+- Uses relative thresholds for speech and silence detection
+- Implements audio level smoothing to prevent false triggers
+- Provides configurable silence duration for automatic recording termination
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Perfect for note-taking apps, voice memos, or any application requiring smart audio recording capabilities.
